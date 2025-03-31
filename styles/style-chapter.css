@@ -1,0 +1,136 @@
+:root{
+    --letter-color: #000;
+    --hover-color: #B2BEB5;
+    --footer-letter-color: #FFFFFF;
+    --semi-transparent: #808080;
+
+    --header-color: #1DB954;
+    --footer-color: #121212;
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    font-weight: 400;
+    font-size: 1.1em;
+    padding: 1% 0% 0% 0%;
+    font-family: "EB Garamond", serif; 
+    font-size: 10pt; 
+    font-style: normal; 
+    font-weight: 3200;
+}   
+
+.links{
+    text-decoration: none;
+    margin-top: .15%;
+    margin-left: 1%;
+}
+
+.links:hover{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Segoe UI'; 
+    font-size: 10pt; 
+    font-style: normal; 
+    font-weight: 3200;
+}
+
+
+.pretext{
+    display: flex;
+    justify-content: center;
+}
+
+.divider{
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    height: 1px;
+    background-color: var(--semi-transparent);
+    margin-bottom: 1rem;
+}
+
+div.div1{
+    margin: 0 auto; 
+    width: 600px;
+}
+
+img.img1{
+    height: 43px; 
+    width: 182px;
+}
+
+img.img2{
+    height: 20px; 
+    width: 21px;
+}
+
+span.s1{
+    font-family: 'Sitka Text'; 
+    font-weight: 5600;
+    display: flex;
+    justify-content: center;
+}
+
+span.s2{
+    font-family: 'Sitka Text';
+    display: flex;
+    justify-content: center;
+}
+
+span.s3{
+    font-family: 'Sitka Text';
+    font-size: 1.00rem;
+}
+
+span.s4{
+    font-family: 'Sitka Text';
+    font-size: 1.00rem; 
+    font-style: italic;}
+
+span.Scrivener-converted-space{white-space:pre;}
+
+@media (max-width: 780px){
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .divider{
+        width: 50%;
+    }
+
+    .pretext {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    div.div1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 600px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}

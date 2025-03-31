@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+:root{
+    --letter-color: #000;
+    --hover-color: #B2BEB5;
+    --footer-letter-color: #FFFFFF;
+    --semi-transparent: #808080;
+
+    --general-font: "Merriweather", serif;
+    --title-font: "Roboto Slab", serif;
+}
+
+header{
+    display: flex;
+    background-color: #1DB954;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.1em;
+    padding: 1% 0% 0% 0%;
+}
+
+.spotify-logo{
+    width: 25px;
+    height: 25px;   
+    margin-right: .5%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.tip{
+    color: var(--letter-color);
+    margin-top: .2%;
+}
+
+main{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    flex-direction: column;
+    font-family: var(--general-font);
+}
+
+h1{
+    font-family: var(--title-font);
+    font-size: 2.5em;
+    margin-bottom: 1%;
+}
+
+.synopsis-pc{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+}
+
+.synopsis-mb{
+    display:none;
+}
+
+.cover{
+    height: 256px;
+    width: 160px;
+    margin-right: 1rem;
+}
+
+.info{
+    margin-top: 1rem;
+}
+
+.socials-container-pc{
+    display: flex;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.socials-container-mb{
+    display: flex;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    visibility: collapse;
+}
+
+ion-icon{
+    margin-top: 1%;
+    height: 15px;
+    width: 15px;
+}
+
+.socials{
+    color: var(--letter-color);
+    text-decoration: none;
+    display: inline-flex;
+    margin-right: .5rem;
+    width: 25px;
+    height: 25px;
+}
+
+.socials:hover{
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+.collapsible-pc{
+    background-color: #DC143C;
+    color: var(--footer-letter-color);
+    cursor: pointer;
+    padding: 1rem;
+    width: 14%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-mb{
+    background-color: #DC143C;
+    color: var(--footer-letter-color);
+    cursor: pointer;
+    padding: 1rem;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    visibility: collapse;
+}
+  
+.active{
+    background-color: #252323;
+}
+
+.collapsible-pc:hover, .collapsible-mb:hover{
+    background-color:  #900C3F;
+}
+
+.collapsible-pc:after, .collapsible-mb:after{
+    content: "+";
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after{
+    content: "-";
+}
+
+.content{
+    background-color: #f1f1f1;
+    padding: 0 18px;
+    margin-right: 5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.warning{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.separator{
+    border-top: 1px solid var(--semi-transparent);
+    color: var(--semi-transparent);
+    margin-right: 10rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+/* here's where the links part starts, you know the drill */
+
+h2{
+    font-size: 1.25rem;
+}
+
+.links{
+    color: var(--letter-color);
+    text-decoration: none;
+    margin-top: 1%;
+}
+
+.links:hover{
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+/* aaaand... done. */
+
+footer{
+    background-color: #121212;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+
+.footer-text{
+    color: var(--footer-letter-color);
+    margin-left: 1%;
+}
+
+/* this is where Hell begins, the mobile version of the page */
+
+@media (max-width: 768px) {
+    header{
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 1% 0% 1% 1%;
+        gap: .5rem;
+    }
+
+    .spotify-logo{
+        margin-top: 1%;   
+    }
+
+    body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    main{
+        padding-top: 10px;
+        flex-grow: 1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .synopsis-pc{
+        display: none;
+    }
+
+    .synopsis-mb{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cover{
+        margin-bottom: 1rem;
+    }
+
+    .collapsible-pc{
+        visibility: collapse;
+    }
+
+    .collapsible-mb{
+        visibility: visible;
+    }
+
+    .socials-container-pc{
+        visibility: collapse;
+    }
+
+    .socials-container-mb{
+        visibility: visible;
+    }
+
+    .separator{
+        margin-right: 0rem;
+    }
+
+    footer{
+        margin-bottom: 0;
+    }
+}
